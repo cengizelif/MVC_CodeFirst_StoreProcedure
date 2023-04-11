@@ -1,0 +1,29 @@
+﻿@model List<MVC_CodeFirst_StoreProcedure.Models.KitapBilgi>
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Index</title>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>Yayın Tarihi</th>
+            <th>Kitap Adı</th>
+        </tr>
+     
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>@(item.YayinTarihi+" "+item.KitapAdı)</td>
+            </tr>
+        }
+
+    </table>
+</body>
+</html>
